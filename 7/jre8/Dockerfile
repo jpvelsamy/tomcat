@@ -1,4 +1,7 @@
 FROM openjdk:8-jre
+# Install net tools
+RUN apt-get update
+RUN apt-get install net-tools
 
 ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
@@ -95,6 +98,7 @@ RUN set -e \
 		echo >&2 "$nativeLines"; \
 		exit 1; \
 	fi
+ADD server.xml.template $CATALINA_HOME/conf/server.xml
 
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
