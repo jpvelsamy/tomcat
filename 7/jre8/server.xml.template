@@ -110,7 +110,7 @@ suspectTimeout="60"
                protocol="org.apache.coyote.http11.Http11Protocol"
                maxThreads="150" SSLEnabled="true" scheme="https" secure="true"
                clientAuth="false" sslProtocol="TLS" 
-               keystoreFile="/home/jpvel/software/tomcat.keystore"
+               keystoreFile="/usr/local/tomcat/tomcat.keystore"
                keystorePass="xyz123"
               compression="force"
               compressableMimeType="text/html,text/xml,text/plain,text/javascript,text/css"/>
