@@ -1,9 +1,9 @@
 FROM openjdk:8-jre
 # Install net tools
 RUN apt-get update
-RUN apt-get install net-tools
+RUN apt-get --assume-yes install net-tools
 #install vim
-RUN apt-get install vim
+RUN apt-get --assume-yes install vim
 
 ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
