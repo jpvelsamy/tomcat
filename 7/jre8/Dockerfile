@@ -4,6 +4,7 @@ RUN apt-get update
 RUN apt-get --assume-yes install net-tools
 #install vim
 RUN apt-get --assume-yes install vim
+RUN apt-get --assume-yes install less 
 
 ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
@@ -102,6 +103,5 @@ RUN set -e \
 	fi
 ADD server.xml.template $CATALINA_HOME/conf/server.xml
 
-EXPOSE 8080
-EXPOSE 8443
-CMD ["catalina.sh", "run"]
+EXPOSE 8080 8443
+#CMD ["catalina.sh", "run"]
