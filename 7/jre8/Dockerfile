@@ -103,4 +103,5 @@ RUN set -e \
 ADD server.xml.template $CATALINA_HOME/conf/server.xml
 
 EXPOSE 8080
+EXPOSE 8443
 CMD ["catalina.sh", "run"]
